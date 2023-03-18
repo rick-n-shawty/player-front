@@ -1,0 +1,47 @@
+
+
+.auth-wrapper{
+min-height: 100vh;
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.auth{
+display: flex;
+flex-direction: column;
+}
+.auth h1{
+color: white;
+}
+.auth form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.auth form label{
+    color: white;
+}
+.auth form input{
+margin-bottom: 1rem;
+height: 3rem;
+}
+.auth form h3{
+margin: 0;
+color: white;
+margin-bottom: 0.5rem;
+}
+.auth form button{
+color: white;
+border: none;
+background-color: #1DB954;
+border-radius: 1.3rem;
+font-size: 1rem;
+cursor: pointer;
+padding: .8rem 2rem .8rem 2rem;
+margin-bottom: 1rem;
+}
+.auth form .link{
+    color: white;
+    text-decoration: none;
+}

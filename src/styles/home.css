@@ -1,0 +1,62 @@
+.home{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.inputTag{
+    cursor: pointer;
+}
+.header .left h2{
+    color: #ffffff;
+}
+.header .right{
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #1DB954;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgb(232, 228, 228);
+    outline: none;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem ;
+}
+
+.form .inputTag{
+    color: white;
+    font-size: 1.3rem;
+}
+.inputTag input{
+    display: none;
+}
+.material-symbols-outlined {
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+@media (max-width: 650px) {
+    
+}

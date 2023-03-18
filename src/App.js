@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-
+import axios from 'axios'; 
+import {useEffect, useState, createContext} from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Login from './components/Login';
+import Home from './components/Home';
+import Register from './components/Register';
+export const UserContext = createContext([])
 function App() {
+  const [user, setUser] = useState({})
+  axios.defaults.baseURL = 'http://localhost:8080/api/v1'
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <UserContext.Provider value={[user, setUser]}>
+        <div className='App'>
+          <Routes>
+            <Route path='/' index element={<Home/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/register' element={<Register/>}/>
+          </Routes>
+        </div>
+      </UserContext.Provider>
+    </BrowserRouter>
   );
 }
 
