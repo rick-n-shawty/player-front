@@ -111,7 +111,7 @@ export default function Home(){
         <div className="home">
             <header className="header">
                 <div className="left">
-                    <h2>Spoti</h2>
+                    <h2>Spotidie</h2>
                 </div>
                 <button className="right" onClick={logOut}>Log out</button>
             </header>
