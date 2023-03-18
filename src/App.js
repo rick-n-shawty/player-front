@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios'; 
 import {useEffect, useState, createContext} from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, HashRouter} from 'react-router-dom';
 import Login from './components/Login';
 import Home from './components/Home';
 import Register from './components/Register';
@@ -11,7 +11,7 @@ function App() {
   const [user, setUser] = useState({})
   axios.defaults.baseURL = 'https://mypostsapi.onrender.com/api/v1'
   return (
-    <BrowserRouter>
+    <HashRouter>
       <UserContext.Provider value={[user, setUser]}>
         <div className='App'>
           <Routes>
@@ -21,7 +21,7 @@ function App() {
           </Routes>
         </div>
       </UserContext.Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
