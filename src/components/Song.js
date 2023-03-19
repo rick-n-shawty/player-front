@@ -31,9 +31,9 @@ export default function Song({id, name, httpUrl, UserContext, deleteSong}){
                 </audio>
             </div>
             <div className='deleteBtn'>
-                <span onClick={() => deleteSong(id)} className='material-symbols-outlined'>
+                <button onClick={() => deleteSong(id)} className='material-symbols-outlined'>
                     delete
-                </span>
+                </button>
             </div>
         </div>
     )
